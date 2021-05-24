@@ -2,8 +2,34 @@
 <html>
 <head>
 	<title></title>
+	<!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-
+<!-- 성현이가 없애버린 메인페이지 엉엉
+<div class="result"></div>
+<script type="text/javascript">
+        const $ = document.querySelector.bind(document);
+        axios.defaults.baseURL = 'http://apigogi.dothome.co.kr';
+        axios.get('/user')
+        .then(
+            response => {
+                console.log(response);
+                $('.result').innerHTML = response.data.id + '환영합니다.<a href="http://apigogi.dothome.co.kr/logout">로그아웃</a>';
+            }
+        )
+        .catch(
+            error => {
+                if (error.response) {
+                    console.log(error.response);
+                    // alert(error.response.data.message);
+                    $('.result').innerHTML = '<a href="login.html">로그인</a>';
+                }
+                else {
+                    console.log(error);
+                }
+            }
+        );
+    </script> -->
 </body>
 </html>

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/signup.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -50,13 +52,11 @@
     <!--signup-->
     <div class="sign-up">
         <div class="form">
-            <form class="register-form">
-                <h1>Sign Up</h1>
-                <input type="text" placeholder="ID" />
-                <input type="password" placeholder="password" />
-                <input type="password" placeholder="password check" />
-                <button>create</button>
-            </form>
+            <h1>Sign Up</h1>
+            <input type="text" placeholder="ID" name="id" />
+            <input type="password" placeholder="password" name="password" />
+            <input type="password" placeholder="password check" />
+            <button class="signup">create</button>
         </div>
     </div>
 <!-- footer -->
@@ -69,6 +69,34 @@
             허미림 wowoo3545@gmail.com</span><br>
         <span>© Copyright Meet your Meat 2021</span> 
     </footer>
+    <script type="text/javascript">
+        const $ = document.querySelector.bind(document);
+        axios.defaults.baseURL = 'http://apigogi.dothome.co.kr';
+        $('.signup').addEventListener('click', () => {
+            let data = new FormData();
+            data.append('id', $('input[name=id]').value);
+            data.append('password', $('input[name=password]').value);
+            axios.post('/signup', data)
+            .then(
+                response => {
+                    console.log(response);
+                    alert('가입에 성공했습니다.');
+                    location.href = 'login.html';
+                }
+            )
+            .catch(
+                error => {
+                    if (error.response) {
+                        console.log(error.response);
+                        alert(error.response.data.message);
+                    }
+                    else {
+                        console.log(error);
+                    }
+                }
+            );
+        });
+    </script>
 </body>
 
 </html>
