@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Banner.css">
+    <!-- 아래 코드는 jquery를 사용하기 위한 코드 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- <link rel="stylesheet" href="./Button.css"> -->
+    <link rel="stylesheet" href="설명.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>
+        꼬기조아
+    </title>
+    <style>
+      
+        h2,p {
+          /* display: none; */
+          color:#96949C; /*본문 글자 색깔*/
+        }
+        #toTop{
+            position: fixed;
+            bottom: 100px;
+            right:50px;
+            z-index: 9999;
+            width: 50px;
+            height: 40px;
+            font-size: 25px;
+            text-align: center;
+            border: 2px solid #96949C; background-color: rgba(0,0,0,0);
+             color: #96949C;/* top버튼 색깔*/
+              padding: 1px;
+        }
+        #toTop:hover{
+            color:white; background-color: #96949C; /*top버튼 마우스 올렸을 때 색깔*/
+
+
+        }
+  
+        body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#96949C;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:30px; /*버튼 크기 바꿀거면 이거랑 76번째 top도 바꿀것*/
+  font-size:20px;
+  padding:3px 10px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#96949C;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #96949C;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:30px;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+        
+        </style>
+
+</head>
+
+<body style="background-color:#262223">
+    <nav class="mobile-menu">
+
+        <label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+
+        <input type="checkbox" id="show-menu">
+        <ul id="menu">
+            <li style="font-size: 25px;"><a href="#">COWPIG</a></li>
+
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+
+
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+            <li><a href="#">INTRODUCING</a></li>
+
+            <li><a href="#">COW</a></li>
+            <li> <a href="#">PIG</a> </li>
+            <li> <a href="#">INFORMATION</a> </li>
+            <li><a href="#">BOARD</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+            <li style="visibility: hidden;"><a href="#">Contact</a></li>
+            <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
+
+
+
+
+            <li>
+                <div style="color:white;width:20px; text-align: right;"></div>
+                <a href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <br/><br/><br/><br/><br/><br/>
+    <script>
+        
+            function top2() { $('html, body').animate({ scrollTop : 0 
+         }, 400)}; 
+        
+
+
+
+
+        function moves1(k){
+            // $('#all1').fadeOut();
+            // $('#all2').fadeOut();
+            // $('#all3').fadeOut();
+            // $('#all4').fadeOut();
+            // $('#all5').fadeOut();
+            ss="#s"+k;
+            test=$(ss);
+            test.fadeOut(1);
+            var location = document.querySelector(ss).offsetTop;
+        window.scrollTo({top:location-50, behavior:'smooth'});
+        
+    
+        test.fadeIn(1000);
+        }
+        
+    </script>
+    
+    <div style="text-align: center;">
+        <button onclick="moves1(1)" style="position: absolute; top:350px;left:100px;">Chuck</button>
+        <button onclick="moves1(2)" style="position: absolute; top:420px;left:100px;">Rib</button>
+        <button onclick="moves1(3)" style="position: absolute; top:350px;right:100px;">Short Loin</button>
+        <button onclick="moves1(4)" style="position: absolute; top:420px;right:100px;">Tenderloin</button>
+        <button onclick="moves1(5)" style="position: absolute; top:490px;right:100px;">Sirloin</button>
+        <button onclick="moves1(6)" style="position: absolute; top:560px;right:100px;">Round</button>
+        <button onclick="moves1(7)" style="position: absolute; top:490px;left:100px;">Brisket</button>
+        <button onclick="moves1(8)" style="position: absolute; top:560px;left:100px;">Plate</button>
+        <button onclick="moves1(9)" style="position: absolute; top:630px;left:100px;">Flank</button>
+        
+        <img src="cow.png" width="1200px" ></div>
+    <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/>
+
+    <input type="button" id="toTop" value="Top" onclick="top2()">
+
+  
+
+    
+
+    <h2 style="margin-left: 100px;">부위 1</h2>
+    <div id="all1">
+    <div  id="s1">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+    </div>
+    </div>
+
+    
+
+    <h2 style="margin-left: 100px;">부위 2</h2>
+    <div id="all2">
+        <div  id="s2">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+        </div>
+    </div>
+
+
+     
+
+    <h2 style="margin-left: 100px;">부위 3</h2>
+    <div id="all3">
+        <div  id="s3">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+        </div>
+        </div>
+        
+
+    <h2 style="margin-left: 100px;">부위 4</h2>
+    <div id="all4">
+        <div  id="s4">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+        </div>
+        </div>
+
+  
+
+    <h2 style="margin-left: 100px;">부위 5</h2>
+    <div id="all5">
+        <div  id="s5">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br/><br/><br/><br/>
+        </div>
+        </div>
+
+        <h2 style="margin-left: 100px;">부위 6</h2>
+    <div id="all6">
+    <div  id="s6">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+    </div>
+    </div>
+
+    <h2 style="margin-left: 100px;">부위 7</h2>
+    <div id="all7">
+    <div  id="s7">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+    </div>
+    </div>
+
+    <h2 style="margin-left: 100px;">부위 8</h2>
+    <div id="all8">
+    <div  id="s8">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+    </div>
+    </div>
+
+    <h2 style="margin-left: 100px;">부위 9</h2>
+    <div id="all9">
+    <div  id="s9">
+    <p style="padding-left: 150px; padding-right: 140px;">
+        동물로부터 얻어지는 음식이기 때문에 식물에 비해서 생산성이 떨어지지만 단백질과 지방이라는 귀중한 에너지원을 동시에 얻을 수 있으며 
+        인류가 가축화를 시작하기 전의 농경을 시작하기 훨씬 전의 채집과 수렵을 하던 고대부터 선호하던 에너지원이다. 수많은 고대 문명들은 농경민 
+        사회든 유목민 사회이든 고기를 섭취했다. 특히 유목민들은 고기를 얻을 수 있는 동물들을 데리고 다니면서 이동하며 말과 같은 동물은 훌륭한 
+        이동과 전쟁 수단이었고, 인류는 다양한 동물들을 가축화하면서 식물로부터는 얻을 수 없는 다양한 영양소를 얻었고 동물 그 자체는 고기와 함께 
+        계란, 젖(특히 우유), 털, 가죽, 진주, 먹물 등 다양한 용도로 쓸 수 있는 자원들을 얻을 수 있는 특성 때문에 고대부터 선호도가 높았던[2] 
+        음식이었던 만큼 채소나 곡물보다 한 단계 비싼 식재료로 취급되었다.</p><br><br/><br/><br/>
+    </div>
+    </div>
+    </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+    
+</body>
+
+</html>
