@@ -19,7 +19,7 @@
     <style>
         h2,p {
           /* display: none; */
-          color:blueviolet;
+          color:blueviolet; /*본문 글자 색깔*/
         }
         #toTop{
             position: fixed;
@@ -29,13 +29,59 @@
             width: 50px;
             height: 40px;
             font-size: 25px;
-            border: 1px solid skyblue; background-color: rgba(0,0,0,0); color: skyblue; padding: 5px;
+            border: 1px solid skyblue; background-color: rgba(0,0,0,0);
+             color: skyblue;/* top버튼 색깔*/
+              padding: 5px;
         }
         #toTop:hover{
-            color:white; background-color: skyblue;
+            color:white; background-color: skyblue; /*top버튼 마우스 올렸을 때 색깔*/
 
 
         }
+  
+        body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:30px; /*버튼 크기 바꿀거면 이거랑 76번째 top도 바꿀것*/
+  font-size:20px;
+  padding:3px 10px;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:30px;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
         
         </style>
 
@@ -106,16 +152,19 @@
         }
         
     </script>
-    <input type="button" onclick="moves1(1)" value="이동버튼1">
-    <input type="button" onclick="moves1(2)" value="이동버튼2">
-    <input type="button" onclick="moves1(3)" value="이동버튼3">
-    <input type="button" onclick="moves1(4)" value="이동버튼4">
-    <input type="button" onclick="moves1(5)" value="이동버튼5">
-    <input type="button" onclick="moves1(6)" value="이동버튼6">
-    <input type="button" onclick="moves1(7)" value="이동버튼7">
-    <input type="button" onclick="moves1(8)" value="이동버튼8">
-    <input type="button" onclick="moves1(9)" value="이동버튼9">
-    <div style="text-align: center;"><img src="cow.png" width="1200px" ></div>
+    
+    <div style="text-align: center;">
+        <button onclick="moves1(1)" style="position: absolute; top:350px;left:550px;">Chuck</button>
+        <button onclick="moves1(2)" style="position: absolute; top:350px;left:600px;">Rib</button>
+        <button onclick="moves1(3)" style="position: absolute; top:350px;left:550px;">Short Loin</button>
+        <button onclick="moves1(4)" style="position: absolute; top:350px;left:550px;">Tenderloin</button>
+        <button onclick="moves1(5)" style="position: absolute; top:350px;left:550px;">Sirloin</button>
+        <button onclick="moves1(6)" style="position: absolute; top:350px;left:550px;">Round</button>
+        <button onclick="moves1(7)" style="position: absolute; top:350px;left:550px;">Brisket</button>
+        <button onclick="moves1(8)" style="position: absolute; top:350px;left:550px;">Plate</button>
+        <button onclick="moves1(9)" style="position: absolute; top:600px;left:440px;">Flank</button>
+        
+        <img src="cow.png" width="1200px" ></div>
     <br/><br/><br/><br/><br/><br/>
     <br/><br/><br/><br/><br/><br/>
 
