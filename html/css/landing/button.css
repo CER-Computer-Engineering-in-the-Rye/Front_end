@@ -87,15 +87,7 @@ button::after {
     transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
 }
 
-html {
-    background: #fefefe;
-}
 
-body {
-    background: #fefefe;
-    color: #4b507a;
-    font: 300 24px/1.5 Lato, sans-serif;
-}
 
 .buttons {
     isolation: isolate;
