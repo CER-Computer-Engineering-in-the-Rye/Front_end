@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap);
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +39,7 @@ body {
     text-align: center;
     width: 100%;
     position: absolute;
-    background: #000000;
+    background: #262223;
     /*테두리 색깔*/
 }
 
@@ -59,7 +62,7 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
     text-transform: uppercase;
-    background: #000000;
+    background: #262223;
     /*버튼들 원래 색깔*/
     text-decoration: none;
     margin-left: -5px;
@@ -77,7 +80,7 @@ body {
 .mobile-menu li:hover a {
     color: #000000;
     /*가져다 댔을 때의 색깔*/
-    background-color: #8f8f8f;
+    background-color: #737272;
     /*버튼색*/
 }
 
