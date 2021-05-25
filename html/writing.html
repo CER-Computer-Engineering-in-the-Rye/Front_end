@@ -17,6 +17,11 @@
     <title>
         꼬기조아
     </title>
+    <style>
+        .ck ck-reset ck-editor ck-rounded-corners{
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,15 +54,15 @@
 
             </ul>
         </nav>
-
-        <br/><br/><br/><br/>
-
+        
         <div id="mainDiv">
-            <form action="bulletin.php" method="post">
-                <p><input type="text" name="title" placeholder="제목" style="width:450px;"></p><br/>
-                <p><input type="text" name="author" placeholder="작성자" style="width:450px;"></p><br/>
+            <br><br><br><br><br><br>
+            <form action="bulletin.php" method="post" style="width: 700px; padding-left: 30px; height: 700px;">
+  
+                <p><input type="text" name="title" placeholder="제목" style="width:450px; background-color: white; height: 30px;"></p><br/> 
+                <p><input type="text" name="author" placeholder="작성자" style="width:450px; background-color: white; height: 30px"></p><br/> 
 
-                <p id="editor" style="width: 400px; height: 600px;">
+                <p id="editor" style="width: 400px; height: 800px;">
                     <!-- <div id="editor"></div> -->
                     <script>
                         ClassicEditor
@@ -66,8 +71,8 @@
                                 console.error(error);
                             });
                     </script>
-
-                    <textarea class="summernote" name="contents"> 
+                    
+                   <textarea class="summernote" name="contents"> 
                 </textarea></p>
                 <br><button type="submit" class="wts-btn" style="font-family: 'Noto Serif KR', serif;">제출하기</button>
             </form>
