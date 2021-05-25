@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>Posting</title>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/tempDivStyle.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="style/font-awesome.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+      rel="stylesheet"
+    />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css"
+      rel="stylesheet"
+    />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $(".summernote").summernote({
+          height: 400,
+          lang: "ko-KR",
+        });
+      });
+    </script>
+    <h1
+      id="header"
+      style="margin-left: 120px; font-family: 'Noto Serif KR', serif"
+    >
+      <b>Post It!</b>
+    </h1>
+    <div id="mainDiv">
+      <form action="bulletin.php" method="post">
+        Title:
+        <p>
+          <input
+            type="text"
+            name="title"
+            placeholder="제목"
+            style="width: 450px"
+          />
+        </p>
+        <br />
+        Autor:
+        <p>
+          <input
+            type="text"
+            name="author"
+            placeholder="작성자"
+            style="width: 450px"
+          />
+        </p>
+        <br />
+        Body:
+        <p><textarea class="summernote" name="contents"></textarea></p>
+        <br /><button
+          type="submit"
+          class="wts-btn"
+          style="font-family: 'Noto Serif KR', serif"
+        >
+          제출하기
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

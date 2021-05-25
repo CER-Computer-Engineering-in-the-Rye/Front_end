@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Hobby In House</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!--css부분 추가-->
+    <style>
+        .imagess {
+            text-align: center; 
+        }
+    </style>
+
+
+
+
+    <!--js부분 추가-->
+    <script type="text/javascript">
+        function button_event(){
+        if (confirm("정말 삭제하시겠습니까?") == true)
+            document.form.submit();
+        else{
+            return;}
+        }
+
+        function scrap(){
+            var str = "위 게시물이 스크랩되었습니다.  스크랩한 게시물로 이동하시겠습니까?";
+           
+            if(confirm(str)== true)
+                location.href="new-scrap.html";
+        }
+
+    </script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- pageheader
+    ================================================== -->
+    <section class="s-pageheader s-pageheader--home">
+
+        <header class="header">
+            <div class="header__content row">
+
+                <div class="header__logo">
+                    <a class="logo" href="index.html">
+                        <h1>Hobby In House.</h1>
+                </div> <!-- end header__logo -->
+
+                <a class="scrap" href="scrap.html">
+                    <img src="images/scrap.png" alt="no_image" class="scrap_icon">
+                </a>
+
+                <a class="login" href="login.html">
+                    <img src="images/login.png" alt="no_image" class="login_icon">
+                </a>
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                    <ul class="header__nav">
+                        <li class="current"><a href="index.html" title="">Home</a></li>
+                        <li><a href="baking.html">Baking</a></li>
+                        <li><a href="cooking.html">Cooking</a></li>
+                        <li><a href="craft.html">Craft</a></li>
+                        <li><a href="game.html">Game</a></li>
+                        <li><a href="home-training.html">Home-Training</a></li>
+                        <li><a href="psychological-test.html">Psychological-test</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+    </section> <!-- end s-pageheader -->
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--narrow">
+
+        <!--버튼 부분-->
+      <div class="various-btn">
+        <br />
+        <input
+          id="list"
+          type="button"
+          value="목록"
+          onclick="location.href='baking.html'"
+          style="font-family: 'Noto Serif KR', serif"
+        />
+        <input 
+            class="scrap" 
+            type="button" 
+            value="스크랩" 
+            onclick="scrap();" 
+            style="font-family: 'Noto Serif KR', serif;"
+        />
+        <!--수정,삭제는 내가 쓴 글일 경우 ,클릭시 이동하는거 확인해주세욤-->
+        <input
+          id="remove"
+          type="button"
+          value="삭제"
+          onclick="button_event();"
+          style="font-family: 'Noto Serif KR', serif"
+        />
+        <input
+          id="modify"
+          type="button"
+          value="수정"
+          onclick="location.href='post_rewriting.html'"
+          style="font-family: 'Noto Serif KR', serif"
+        />
+        <!--글작성하는 페이지 비워놔써-->
+        <br /><br /><br />
+      </div>
+
+        <article class="row format-standard">
+
+            <div class="s-content__header col-full">
+                <h1 class="s-content__header-title">
+                    달고나 커피 만들기
+                </h1>
+                <ul class="s-content__header-meta">
+                    <li class="date">September 27, 2020</li>
+                    <li class="cat">
+                        In
+                        <a href="#0">Baking</a>
+                        <li class="hits">조회수: 85</li>
+                    </li>
+                </ul>
+            </div> <!-- end s-content__header -->
+    
+
+            <div class="col-full s-content__main">
+                <div class="imagess">
+                    <h4>오늘은 달고나커피 레시피&꿀팁에 대해 알아봅시다!</h4><br>
+                    <h6>재료:커피 가루,우유,설탕,물</h6>
+                <img src="images/baking/bk1_1.png" alt="" width="500" height="500px">
+                <br><p>1. 커피가루를 넣어줍니다.</p>
+                <br><br>
+                <img src="images/baking/bk1_2.png" alt="" width="500" height="500px">
+                <br><p>2. 카누 5개에 설탕 4스푼을 넣어줍니다.</p>
+                <br><br>
+                <img src="images/baking/bk1_3.png" alt="" width="500" height="500px">
+                <br><p>3. 가장 중요한게 뜨거운 물!! <br>
+                    뜨거운물은 살짝 잠겨서 녹을정도로만 넣고 조금씩 추가해주는게 좋습니다.
+                </p>
+                <br><br>
+                <img src="images/baking/bk1_4.png" alt="" width="500" height="500px">
+                <br><p>4. 후다닥 저어줍니다. (대충 400번 정도..)</p>
+                <br><br>
+                <img src="images/baking/bk1_5.png" alt="" width="500" height="500px">
+                <br><p>5. 열심히 저어보면 조금씩 티 안나게 색이 밝아지는게 느껴집니다.</p>
+                <br><br>
+                <img src="images/baking/bk1_6.png" alt="" width="500" height="500px">
+                <br><p>6. 한 15분 정도 지났을 때 조금씩 무거워지면서 꾸덕해지는 것을 볼 수 있습니다.</p>
+                <br><br>
+                <img src="images/baking/bk1_7.png" alt="" width="500" height="500px">
+                <br><p>7. 컵에 우유를 붙고 열심히 저은 달고나를 우유 위에 살포시 올려줍니다.</p>
+                <br><br>
+                <img src="images/baking/bk1_cover.PNG" alt="" width="500" height="500px">
+                <br><p>8. 섞어 저어 먹으면 더 꿀맛! 달고나커피 완성!</p>
+                <br><br>
+              
+
+                </div>
+            </div> <!-- end s-content__main -->
+
+        </article>
+
+
+        <!--댓글 창  css부분 수정 필요!-->
+        <br><br><br><br>
+        <h3 style="text-align:center;">댓글</h3>
+        <input type="hidden" id="board_id" name="board_id" value="${boardView.id}" />
+        <div style="margin-left: 50px; margin-right: 50px;">
+            <table border="1" width="900px" id="reply_area" class="recomment">
+                <tr reply_type="all"><!-- 뒤에 댓글 붙이기 쉽게 선언 -->
+                    <td colspan="5"></td>
+                </tr>
+                <!-- 댓글이 들어갈 공간 -->
+            </table>
+            <table width="900px" bordercolor="#46AA46" class="comment">
+                <tr>
+                    <td id="Tbox" width="500px">
+                        이름: <input type="text" id="reply_writer" name="reply_writer" style="width:170px; background-color: #eee;" maxlength="10" placeholder="작성자"/>
+                        패스워드: <input type="password" id="reply_password" name="reply_password" style="width:170px; background-color: #eee;" maxlength="10" placeholder="패스워드"/>
+                        <textarea id="reply_content" name="reply_content" rows="4" cols="50" placeholder="댓글을 입력하세요." style="background-color: #eee;"></textarea>
+                        <button id="reply_save"  name="reply_save" style="font-family: 'Noto Serif KR', serif">댓글 등록</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br><br>
+
+
+    </section> <!-- s-content -->
+
+
+
+    <!-- s-footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>Contributor<br>
+                            김률아 hobby0519@gmail.com<br>
+                            김민겸 gms08184@gmail.com<br>  
+                            박준희 qaz74792@gmail.com<br>
+                            심성현 sh010604@naver.com<br>
+                            전명환 ab5502ghals@naver.com<br>
+                            허미림 wowoo3545@gmail.com</span><br>
+                        <span>© Copyright Hobby In House 2020</span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+
+</body>
+
+</html>
