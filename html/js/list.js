@@ -1,15 +1,11 @@
-const $ = document.querySelector.bind(document);
 const see = $(".list");
-axios.defaults.baseURL = "http://apigogi.dothome.co.kr";
-let data = new FormData();
-
-axios.get("/board/info", data).then(
+axios.get("/board/info").then(
     (response) => {
         const len = response.data.item.length;
         for (let i = 0; i < len; i++) {
             const idx = response.data.item[i].idx;
-            const title = response.data.item[i].subject;
-            const date = response.data.item[i].datetime;
+            const title = response.data.item[i].title;
+            const date = response.data.item[i].date;
             let tag = `
                 <tr>
                     <th>${i}</th>

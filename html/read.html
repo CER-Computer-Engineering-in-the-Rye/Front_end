@@ -72,7 +72,10 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/landing/index.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/axios.js"></script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -118,8 +121,8 @@
           </table>
           <br><br><br><br>
           <div class="cnt" style="color: white; width: 970px; display: inline-block; text-align: left;"></div>
-          <button class="del" style="position: absolute; right: 400px; font-size: 15px;">글삭제</button>
-          <button class="snip1535" onclick="ss()" style="position: absolute; right: 300px;font-size: 15px;">글수정</button>
+          <button class="del delete-button" style="position: absolute; right: 400px; font-size: 15px;">글삭제</button>
+          <button class="snip1535 update-button" onclick="ss()" style="position: absolute; right: 300px;font-size: 15px;">글수정</button>
           <button class="snip1535" onclick="mvlist()" style="position: absolute; right: 180px;font-size: 15px;">목록으로</button>
     </div>
     
@@ -134,5 +137,6 @@
         <span>© Copyright Meet your Meat 2021</span> 
     </div>
     <script src="js/read.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
 </body>
 </html>

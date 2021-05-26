@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/landing/index.css">
     <link rel="stylesheet" href="css/landing/button.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/axios.js"></script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -61,18 +65,9 @@
                 고기의 각 부위별 설명 기능에서 사용자가 조리해보고자 하는 고기를 선택하고, ‘Meat Area’에서 주변 정육점을 검색해 해당 고기를 파는 곳을 확인할 수 있다. 
             </p>
             <br/>
-            <script>
-                function mvcow(){
-                    location.href="cow.html";
-                }
-                function mvpig(){
-                    location.href="pig.html";
-                }
-            </script>
-
             <br/>
-                <button class="draw meet" onclick="mvcow()">Go Cow</button>
-                <button class="draw meet" onclick="mvpig()">Go Pig</button>
+            <button class="draw meet" onclick="mvcow()">Go Cow</button>
+            <button class="draw meet" onclick="mvpig()">Go Pig</button>
         </div>
     </span>
     
@@ -86,6 +81,14 @@
             허미림 wowoo3545@gmail.com</span><br>
         <span>© Copyright Meet your Meat 2021</span> 
     </div>
-    <script type="text/javascript" src="button.js"></script>
+    <script>
+        function mvcow(){
+            location.href="cow.html";
+        }
+        function mvpig(){
+            location.href="pig.html";
+        }
+    </script>
+    <script type="text/javascript" src="js/header.js"></script>
 </body>
 </html>

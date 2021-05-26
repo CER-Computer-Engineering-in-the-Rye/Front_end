@@ -1,32 +1,67 @@
-const $ = document.querySelector.bind(document);
 const sub = $(".sub");
 const wri = $(".wri");
 const cnt = $(".cnt");
 const date = $(".date");
-axios.defaults.baseURL = "http://apigogi.dothome.co.kr";
-
-let data = new FormData();
 
 let url_string = window.location.href;
 let url = new URL(url_string);
 let c = url.searchParams.get("idx");
-console.log(c);
 
-axios.get("/board/info", data).then((response) => {
-  const len = response.data.item.length;
-  const idx = c;
-  for (let i = 0; i < len; i++) {
-    if (idx == response.data.item[i].idx) {
-      const info = response.data.item[i];
-      console.log(info);
-      sub.innerText = info.subject;
-      wri.innerText = info.writer;
-      cnt.innerHTML = info.content;
-      date.innerText = info.datetime;
-    }
+const getUserId = idx => {
+  return axios.get('/user/id/'+idx);
+};
+
+axios.get('/board/info/'+c).then(
+  response => {
+    console.log(response);
+
+    const deleteButton = $('.delete-button');
+    const updateButton = $('.update-button');
+
+    axios.get('/user/'+localStorage.getItem('token')).then(
+      response2 => {
+        console.log(response2);
+        if (response.data.user_idx == response2.data.idx) {
+          deleteButton.style.display = 'initial';
+          updateButton.style.display = 'initial';
+        }
+        else {
+          deleteButton.style.display = 'none';
+          updateButton.style.display = 'none';
+        }
+      }
+    ).catch(
+      error => {
+        console.error(error);
+        deleteButton.style.display = 'none';
+        updateButton.style.display = 'none';
+      }
+    );
+
+    getUserId(response.data.user_idx).then(
+      response2 => {
+        console.log(response2);
+        sub.innerHTML = response.data.title;
+        wri.innerHTML = response2.data.id;
+        cnt.innerHTML = response.data.content;
+        date.innerHTML = response.data.date;
+      }
+    ).catch(
+      error => {
+        if (error.response) {
+          alert(error.response.data.message);
+          location.href = 'list.html';
+        }
+        else {
+          console.error(error);
+        }
+      }
+    );
+  },
+  error => {
+    console.error(error);
   }
-  console.log(response);
-});
+);
 
 console.log($(".del"));
 $(".del").addEventListener("click", () => {
@@ -35,7 +70,7 @@ $(".del").addEventListener("click", () => {
   let c = url.searchParams.get("idx");
   console.log(c);
   axios
-    .get("/board/delete?idx=" + c)
+    .get("/board/delete/"+c)
     .then((response) => {
       console.log(response);
       alert("삭제되었습니다");

@@ -83,12 +83,15 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cow.css">
     <!-- 아래 코드는 jquery를 사용하기 위한 코드 -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <!-- <link rel="stylesheet" href="./Button.css"> -->
-    <link rel="stylesheet" href="css/cow.css">
-    <link rel="stylesheet" href="css/.css">
+
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/axios.js"></script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -111,36 +114,6 @@
         </div>
     </div>
     <br/><br/><br/><br/><br/><br/>
-    <script>
-        function top2() {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 400)
-        };
-
-
-
-
-
-        function moves1(k) {
-            // $('#all1').fadeOut();
-            // $('#all2').fadeOut();
-            // $('#all3').fadeOut();
-            // $('#all4').fadeOut();
-            // $('#all5').fadeOut();
-            ss = "#s" + k;
-            test = $(ss);
-            test.fadeOut(1);
-            var location = document.querySelector(ss).offsetTop;
-            window.scrollTo({
-                top: location - 50,
-                behavior: 'smooth'
-            });
-
-
-            test.fadeIn(1000);
-        }
-    </script>
     <div style="text-align: center;">
         <button onclick="moves1(1)" style="position: absolute; top:350px;left:100px;">Blade Shoulder</button>
         <button onclick="moves1(2)" style="position: absolute; top:420px;left:100px;">Spare Rib</button>
@@ -225,5 +198,31 @@
             허미림 wowoo3545@gmail.com</span><br>
         <span>© Copyright Meet your Meat 2021</span> 
     </div>
+    <script>
+        function top2() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 400)
+        };
+        function moves1(k) {
+            // $('#all1').fadeOut();
+            // $('#all2').fadeOut();
+            // $('#all3').fadeOut();
+            // $('#all4').fadeOut();
+            // $('#all5').fadeOut();
+            ss = "#s" + k;
+            test = $(ss);
+            test.fadeOut(1);
+            var location = document.querySelector(ss).offsetTop;
+            window.scrollTo({
+                top: location - 50,
+                behavior: 'smooth'
+            });
+
+
+            test.fadeIn(1000);
+        }
+    </script>
+    <script type="text/javascript" src="js/header.js"></script>
 </body>
 </html>

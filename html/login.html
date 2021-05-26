@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/axios.js"></script>
 </head>
 <body>
 
@@ -59,8 +61,6 @@
         <span>© Copyright Meet your Meat 2021</span> 
     </div>
     <script type="text/javascript">
-        const $ = document.querySelector.bind(document);
-        axios.defaults.baseURL = 'http://apigogi.dothome.co.kr';
         $('.login').addEventListener('click', () => {
             let data = new FormData();
             data.append('id', $('input[name=id]').value);
@@ -69,6 +69,7 @@
             .then(
                 response => {
                     console.log(response);
+                    localStorage.setItem('token', response.data.token);
                     alert('로그인에 성공했습니다.');
                     location.href = 'index.html';
                 }
