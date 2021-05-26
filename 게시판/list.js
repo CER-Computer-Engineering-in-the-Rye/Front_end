@@ -7,6 +7,7 @@ axios.get("/board/info", data).then((response) => {
   const len = response.data.item.length;
 
   for (let i = 0; i < len; i++) {
+    const a = document.createElement("a");
     const tr = document.createElement("tr");
     const idx = document.createElement("th");
     const sub = document.createElement("td");
@@ -18,6 +19,7 @@ axios.get("/board/info", data).then((response) => {
     tr.appendChild(sub);
     tr.appendChild(date);
     see.appendChild(tr);
+    a.appendChild(sub);
   }
   console.log(response);
 });
