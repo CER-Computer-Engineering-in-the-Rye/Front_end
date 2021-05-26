@@ -1,28 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap);
-
-/* menu style
-* {
-    margin: 0;
-    padding: 0;
-} */
-
 #hihi {
     position: absolute;
     margin: 0;
 }
-
-
 /*login style*/
 .login-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;    
 }
 .form {
   position: relative;
   z-index: 1;
-  background: #262223;
+  background: #212121;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 70px;
@@ -71,12 +64,6 @@
 .form .message a {
   color: #737272;
   text-decoration: none;
-}
-body {
-  background: #262223; /* fallback for old browsers */
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
 }
 h1 {
   font-family: "Roboto", sans-serif;
