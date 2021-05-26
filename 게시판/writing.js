@@ -20,6 +20,7 @@ $(".wts-btn").addEventListener("click", () => {
       .post("/board/write", data1)
       .then((response) => {
         console.log(response);
+        location.href = "list.html";
       })
       .catch((error) => {
         if (error.response) {
