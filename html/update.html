@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pont.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>
+        꼬기조아
+    </title>
+    <style>
+        .ck ck-reset ck-editor ck-rounded-corners{
+            height: 100px;
+        }
+    </style>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <body style="background-color:#262223;">
+
+        <nav class="mobile-menu">
+
+            <label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+
+            <input type="checkbox" id="show-menu">
+            <ul id="menu">
+                <li style="font-size: 25px;"><a href="#">COWPIG</a></li>
+                <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+                <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+                <li><a href="landing.html">INTRODUCING</a></li>
+
+                <li><a href="cow.html">COW</a></li>
+                <li> <a href="pig.html">PIG</a> </li>
+                <li> <a href="map.html">INFORMATION</a> </li>
+                <li><a href="list.html">BOARD</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+                <li style="visibility: hidden;"><a href="#">Contact</a></li>
+                <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
+                <li>
+                    <div style="color:white;width:20px; text-align: right;"></div>
+                    <a href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+        
+        <div id="mainDiv">
+            <br><br><br><br><br><br>
+  
+                <p><input type="text" name="title" placeholder="제목" style="width:450px; background-color: white; height: 30px;"></p><br/> 
+                <p><ul class="wri" style="color:white;"> 
+                author: </ul><br/> 
+                <textarea name="editor1"></textarea>
+                <br><button type="submit" class="upd-btn" style="font-family: 'Noto Serif KR', serif;">제출하기</button>
+        </div>
+
+        <footer class="s-footer">
+            <span>Contributor<br>
+            김률아 hobby0519@gmail.com<br>
+            강혜연 @gmail.com<br> 
+            심성현 qaz74792@gmail.com<br>
+            이호영 @gmail.com<br> 
+            허미림 wowoo3545@gmail.com</span><br>
+            <span>© Copyright Meet your Meat 2021</span>
+        </footer>
+        <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+        <script type="text/javascript">
+            const $ = document.querySelector.bind(document);
+            axios.defaults.baseURL = "http://apigogi.dothome.co.kr";
+            const input_wri = $(".wri");
+            let data = new FormData();
+            let url_string = window.location.href;
+            let url = new URL(url_string);
+            let c = url.searchParams.get("idx");
+            const idx = c;
+            
+            axios.get("/board/info", data).then((response) => {
+                const len = response.data.item.length;
+                for (let i = 0; i < len; i++) {
+                    if (idx == response.data.item[i].idx) {
+                        const info = response.data.item[i];
+                        console.log(info);
+                        input_wri.innerText=info.writer;
+                    }
+                }
+            });
+            
+            
+            CKEDITOR.replace( 'editor1', {
+                language: 'ko',
+                uiColor: '#eeeeee',
+                resize_enabled: false,
+                width: '300px',
+                height: '500px'
+            });
+        </script>
+        <script src="../게시판/update.js"></script>
+    </body>
+</html>

@@ -1,11 +1,13 @@
-console.log($(".wts-btn"));
-$(".wts-btn").addEventListener("click", () => {
+console.log($(".upd-btn"));
+$(".upd-btn").addEventListener("click", () => {
   let data1 = new FormData();
 
-  console.log("12321312");
   axios.get("/board/info", data1).then((response) => {
     console.log(response);
-    const writer = response.data.item[0].writer; /*계정*/
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let c = url.searchParams.get("idx");
+    const writer = response.data.item[c].writer;
     console.log($("input[name=title]").value);
     console.log(CKEDITOR.instances.editor1.getData());
     data1.append("sub", $("input[name=title]").value);
@@ -14,10 +16,14 @@ $(".wts-btn").addEventListener("click", () => {
     write();
   });
 
+  let url_string = window.location.href;
+  let url = new URL(url_string);
+  let c = url.searchParams.get("idx");
+
   console.log(data1);
   function write() {
     axios
-      .post("/board/write", data1)
+      .post("/board/update?idx=" + c, data1) /*idx를 get으로 불러와야함*/
       .then((response) => {
         console.log(response);
         location.href = "list.html";
