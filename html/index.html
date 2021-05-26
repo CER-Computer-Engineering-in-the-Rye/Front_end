@@ -1,9 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
+</html>
+
 <head>
-	<title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
+
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>
+        꼬기조아
+    </title>
+	<style>
+		#cow:hover{
+			background-color: #232323;
+		}
+		#pig:hover{
+			background-color: #232323;
+		}
+	</style>
 </head>
-<body>
-	branch test
+
+<script>
+	function mc(){
+		location.href="cow.html";
+	}
+	function mp(){
+		location.href="pig.html";
+	}
+</script>
+
+<body style="background-color:#262223;">
+
+    <nav class="mobile-menu">
+
+        <label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+
+        <input type="checkbox" id="show-menu">
+        <ul id="menu">
+            <li style="font-size: 25px;"><a href="#">COWPIG</a></li>
+
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+
+
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+            <li><a href="landing.html">INTRODUCING</a></li>
+
+            <li><a href="cow.html">COW</a></li>
+            <li> <a href="pig.html">PIG</a> </li>
+            <li> <a href="map.html">INFORMATION</a> </li>
+            <li><a href="writing.html">BOARD</a></li>
+
+            <!-- <li><a href="#">Contact</a></li> -->
+            <li style="visibility: hidden;"><a href="#">Contact</a></li>
+            <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
+
+
+
+
+            <li>
+                <div style="color:white;width:20px; text-align: right;"></div>
+                <a href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+
+	</div>
+	<div style="height: 100px;">
+
+	</div>
+	<div style="height: 600px; position: relative;" id="cow" onclick="mc()">
+		<p style="color: white; position:absolute; font-size: 50px; font-style: bold; left: 800px; top:150px">Everything of Cow</p>
+		<p style="color: white; position:absolute; font-size: 30px; font-style: bold; left: 800px; top:230px; text-align: left; width: 370px;">
+			쓰고싶은 내용 엔터 쳐가면서 입력</p>
+		<img src="img/cow/cow.png" height="700px" width="900px">
+		
+	</div>
+	<div style="height: 600px; border: solid white 1px;position: relative; " id ="pig" onclick="mp()">
+		<p style="color: white; position:absolute; font-size: 50px; font-style: bold; right: 900px; bottom:400px">Everything of Pig</p>
+		<p style="color: white; position:absolute; font-size: 30px; font-style: bold; right: 900px; top:230px; text-align: left; width: 370px;">
+			쓰고싶은 내용 엔터 쳐가면서 입력</p>
+		<img src="img/pig/pig.png" height="650px" width="900px" style="position: absolute; right:70px">
+
+	</div>
+	
+		
+
+	<footer class="s-footer">
+        <span>Contributor<br>
+            김률아 hobby0519@gmail.com<br>
+            강혜연 @gmail.com<br> 
+            심성현 qaz74792@gmail.com<br>
+            이호영 @gmail.com<br> 
+            허미림 wowoo3545@gmail.com</span><br>
+        <span>© Copyright Meet your Meat 2021</span> 
+    </footer>
+	
+
 </body>
+
 </html>
