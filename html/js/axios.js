@@ -1,0 +1,1 @@
+axios.defaults.baseURL = 'http://apigogi.dothome.co.kr';

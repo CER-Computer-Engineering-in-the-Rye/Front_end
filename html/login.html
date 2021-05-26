@@ -70,7 +70,6 @@
                 response => {
                     console.log(response);
                     localStorage.setItem('token', response.data.token);
-                    alert('로그인에 성공했습니다.');
                     location.href = 'index.html';
                 }
             )
