@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>키워드로 장소검색하고 목록으로 표출하기</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <title>
+        꼬기조아
+    </title>
+
     <style>
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
@@ -48,6 +57,41 @@ body{
 background-color: #262223;
 }
 </style>
+ <nav class="mobile-menu">
+
+        <label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
+
+        <input type="checkbox" id="show-menu">
+        <ul id="menu">
+            <li style="font-size: 25px;"><a href="#">COWPIG</a></li>
+
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+
+
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+            <li><a href="landing.html">INTRODUCING</a></li>
+
+            <li><a href="cow.html">COW</a></li>
+            <li> <a href="pig.html">PIG</a> </li>
+            <li> <a href="map.html">INFORMATION</a> </li>
+            <li><a href="#">BOARD</a></li>
+            <!-- <li><a href="#">Contact</a></li> -->
+            <li style="visibility: hidden;"><a href="#">Contact</a></li>
+            <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
+
+
+
+
+            <li>
+                <div style="color:white;width:20px; text-align: right;"></div>
+                <a href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
 <div class="map_wrap">
     <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
 
@@ -286,5 +330,15 @@ function removeAllChildNods(el) {
     }
 }
 </script>
+<!-- footer -->
+    <footer class="s-footer">
+        <span>Contributor<br>
+            김률아 hobby0519@gmail.com<br>
+            강혜연 @gmail.com<br> 
+            심성현 qaz74792@gmail.com<br>
+            이호영 @gmail.com<br> 
+            허미림 wowoo3545@gmail.com</span><br>
+        <span>© Copyright Meet your Meat 2021</span> 
+    </footer>
 </body>
 </html>

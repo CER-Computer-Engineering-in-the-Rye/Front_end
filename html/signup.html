@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/signup.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -19,37 +23,80 @@
         <input type="checkbox" id="show-menu">
         <ul id="menu">
             <li style="font-size: 25px;"><a href="#">COWPIG</a></li>
+
+
             <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
 
-            <li><a href="#">INTRODUCING</a></li>
-            <li><a href="#">COW</a></li>
-            <li> <a href="#">PIG</a> </li>
-            <li> <a href="#">INFORMATION</a> </li>
-            <li><a href="#">BOARD</a></li>
 
+
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+            <li><a href="landing.html">INTRODUCING</a></li>
+
+            <li><a href="cow.html">COW</a></li>
+            <li> <a href="pig.html">PIG</a> </li>
+            <li> <a href="map.html">INFORMATION</a> </li>
+            <li><a href="#">BOARD</a></li>
             <!-- <li><a href="#">Contact</a></li> -->
             <li style="visibility: hidden;"><a href="#">Contact</a></li>
-            <li style="visibility: hidden;"><a href="#">Con</a></li>
+            <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
+
             <li>
                 <div style="color:white;width:20px; text-align: right;"></div>
                 <a href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
                 </div>
             </li>
+
         </ul>
     </nav>
 
     <!--signup-->
     <div class="sign-up">
         <div class="form">
-            <form class="register-form">
-                <h1>Sign Up</h1>
-                <input type="text" placeholder="ID" />
-                <input type="password" placeholder="password" />
-                <input type="password" placeholder="password check" />
-                <button>create</button>
-            </form>
+            <h1>Sign Up</h1>
+            <input type="text" placeholder="ID" name="id" />
+            <input type="password" placeholder="password" name="password" />
+            <input type="password" placeholder="password check" />
+            <button class="signup">create</button>
         </div>
     </div>
+<!-- footer -->
+    <footer class="s-footer">
+        <span>Contributor<br>
+            김률아 hobby0519@gmail.com<br>
+            강혜연 @gmail.com<br> 
+            심성현 qaz74792@gmail.com<br>
+            이호영 @gmail.com<br> 
+            허미림 wowoo3545@gmail.com</span><br>
+        <span>© Copyright Meet your Meat 2021</span> 
+    </footer>
+    <script type="text/javascript">
+        const $ = document.querySelector.bind(document);
+        axios.defaults.baseURL = 'http://apigogi.dothome.co.kr';
+        $('.signup').addEventListener('click', () => {
+            let data = new FormData();
+            data.append('id', $('input[name=id]').value);
+            data.append('password', $('input[name=password]').value);
+            axios.post('/signup', data)
+            .then(
+                response => {
+                    console.log(response);
+                    alert('가입에 성공했습니다.');
+                    location.href = 'login.html';
+                }
+            )
+            .catch(
+                error => {
+                    if (error.response) {
+                        console.log(error.response);
+                        alert(error.response.data.message);
+                    }
+                    else {
+                        console.log(error);
+                    }
+                }
+            );
+        });
+    </script>
 </body>
 
 </html>
