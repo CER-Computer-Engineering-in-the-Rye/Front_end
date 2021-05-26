@@ -7,6 +7,7 @@ $(".wts-btn").addEventListener("click", () => {
     console.log(response);
     const writer = response.data.item[0].writer; /*계정*/
     console.log($("input[name=title]").value);
+    console.log($("textarea[name=contents]").value);
     data1.append("sub", $("input[name=title]").value);
     data1.append("cnt", $("textarea[name=contents]").value);
     /*data1.append("writer", writer);*/
