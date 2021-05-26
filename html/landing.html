@@ -31,14 +31,14 @@
 
 
 
-           <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
+            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
             <li><a href="landing.html">INTRODUCING</a></li>
 
             <li><a href="cow.html">COW</a></li>
             <li> <a href="pig.html">PIG</a> </li>
             <li> <a href="map.html">INFORMATION</a> </li>
-       
-            <li><a href="writing.html">BOARD</a></li>
+
+            <li><a href="list.html">BOARD</a></li>
             <!-- <li><a href="#">Contact</a></li> -->
             <li style="visibility: hidden;"><a href="#">Contact</a></li>
             <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
@@ -52,7 +52,7 @@
         </ul>
     </nav>
 
-    
+
 
     <script type="text/javascript" src="button.js"></script>
 
@@ -62,7 +62,7 @@
             <strong>
                 <div style="text-align:center">
                     <h2>
-                        <p>소개 내용</p>
+                        <p>Meet Yout Meat 소개</p>
                     </h2>
                 </div>
             </strong>
@@ -72,23 +72,38 @@
 
     <span style=" font-size:1.0em;  color: #f3f3f3;">
             <div style="text-align:center">
-                <p>"한 줄 카피로 웹페이지 소개(슬로건)"</p>
+                <p>"고기의, 고기에 의한, 고기를 위한"</p>
             </div>
+            <div style="text-align: center;"><img src="img/logo_white.png" width="450px"></div>
         </span>
 
-    <br/><br/><br/>
+    <br/><br/>
 
     <span style=" font-size:0.8em;  color: #f3f3f3;">
             <div style="text-align:center">
-                <p><li>우리나라의 청정 한우는~</li></p>
+                <p><strong>알고 먹으면 맛도 두 배라는 말이 있다. </strong><br/><br>
+                    ‘Meet your Meat’은 소와 돼지의 각 부위별 설명과 다양한 조리법을 소개하여 사용자가 더 맛있는 고기를 즐기기 위해 제작을 결정하게 되었다.<br/>
+                    더 나아가 사용자 주변의 정육점 위치와 리뷰를 볼 수 있는 ‘Meat Area’ 기능을 통해 질 좋은 고기를 구매할 수 있도록 한다. <br/>
+                    이처럼 최상급의 고기와 최적의 레시피로 사용자가 고기의 맛을 최대화해 먹을 수 있다는 효과를 기대할 수 있다. <br/><br/>
+                    또한, 추후 정육점과의 제휴를 통해 ‘생고기 배달 서비스’라는 새로운 개념의 배달 기능을 도입한다면 신선한 생고기를 주변 정육점에서 바로 받아볼 수 있다. <br/>
+                    고기의 각 부위별 설명 기능에서 사용자가 조리해보고자 하는 고기를 선택하고, ‘Meat Area’에서 주변 정육점을 검색해 해당 고기를 파는 곳을 확인할 수 있다. 
+                </p>
                 <br/>
-                <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fc.pxhere.com%2Fphotos%2Fb5%2F4b%2Fcows_tyrol_alm_austria_nature_agriculture-394555.jpg!d&type=sc960_832" width="400" height="300" alt="이미지를 불러오지 못했습니다">
+                <script>
+                    function mvcow(){
+                        location.href="cow.html";
+                    }
+                    function mvpig(){
+                        location.href="pig.html";
+                    }
+                </script>
+
                 <br/>
-                    <button class="draw meet">Go Cow</button>
-                    <button class="draw meet">Go Pig</button>
+                    <button class="draw meet" onclick="mvcow()">Go Cow</button>
+                    <button class="draw meet" onclick="mvpig()">Go Pig</button>
             </div>  
     </span>
-<!-- footer -->
+    <!-- footer -->
     <footer class="s-footer">
         <span>Contributor<br>
             김률아 hobby0519@gmail.com<br>
@@ -96,7 +111,7 @@
             심성현 qaz74792@gmail.com<br>
             이호영 @gmail.com<br> 
             허미림 wowoo3545@gmail.com</span><br>
-        <span>© Copyright Meet your Meat 2021</span> 
+        <span>© Copyright Meet your Meat 2021</span>
     </footer>
 </body>
 

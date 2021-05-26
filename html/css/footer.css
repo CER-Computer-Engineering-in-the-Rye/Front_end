@@ -6,4 +6,8 @@ footer {
      font-size: medium;
      line-height: 2;
      color: #A6A6A6;
+     position: relative;
+     width: 100%;
+     bottom: 0px;
+
    }
