@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
 
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <title>
@@ -13,6 +12,18 @@
     </title>
 
     <style>
+    .s-footer{
+      background-color: #737272;
+     padding-top: 70px;
+     padding-bottom: 70px;
+     padding-left: 100px;
+     font-size: medium;
+     line-height: 2;
+     color: #A6A6A6;
+   position:relative;
+     width: 100%;
+     bottom: 0px;
+    }
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
 .map_wrap {position:relative;width:100%;height:500px;}
@@ -63,7 +74,7 @@ background-color: #262223;
 
         <input type="checkbox" id="show-menu">
         <ul id="menu">
-            <li style="font-size: 25px;"><a href="index.html">COWPIG</a></li>
+            <li style="font-size: 25px;"><a href="#">COWPIG</a></li>
 
 
             <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
@@ -71,13 +82,12 @@ background-color: #262223;
 
 
             <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
-            <li><a href="landing.html">INTRODUCING</a></li>
+            <li><a href="#">INTRODUCING</a></li>
 
-            <li><a href="cow.html">COW</a></li>
-            <li> <a href="pig.html">PIG</a> </li>
-            <li> <a href="map.html">INFORMATION</a> </li>
-            <li><a href="list.html">BOARD</a></li>
-
+            <li><a href="#">COW</a></li>
+            <li> <a href="#">PIG</a> </li>
+            <li> <a href="#">INFORMATION</a> </li>
+            <li><a href="#">BOARD</a></li>
             <!-- <li><a href="#">Contact</a></li> -->
             <li style="visibility: hidden;"><a href="#">Contact</a></li>
             <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
@@ -93,8 +103,8 @@ background-color: #262223;
 
         </ul>
     </nav>
-<div class="map_wrap">
-    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+<div class="map_wrap" style="margin-top: 50px; margin-bottom: 150px">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden; "></div>
 
     <div id="menu_wrap" class="bg_white">
         <div class="option">
@@ -331,8 +341,7 @@ function removeAllChildNods(el) {
     }
 }
 </script>
-<!-- footer -->
-    <footer class="s-footer">
+<div class="s-footer">
         <span>Contributor<br>
             김률아 hobby0519@gmail.com<br>
             강혜연 @gmail.com<br> 
@@ -340,6 +349,6 @@ function removeAllChildNods(el) {
             이호영 @gmail.com<br> 
             허미림 wowoo3545@gmail.com</span><br>
         <span>© Copyright Meet your Meat 2021</span> 
-    </footer>
+    </div>
 </body>
 </html>
