@@ -1,13 +1,8 @@
-footer {
-    background-color: #737272;
-     padding-top: 70px;
-     padding-bottom: 70px;
-     padding-left: 100px;
-     font-size: medium;
-     line-height: 2;
-     color: #A6A6A6;
-     position: relative;
-     width: 100%;
-     bottom: 0px;
-
-   }
+.footer {
+    width: calc(100% - 100px * 2);
+    padding: 70px 100px;
+    background-color: #616161;
+    font-size: medium;
+    line-height: 2;
+    color: #eee;
+}
