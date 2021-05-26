@@ -14,7 +14,7 @@ console.log(c);
 
 axios.get("/board/info", data).then((response) => {
   const len = response.data.item.length;
-  const idx = c; /*get방식으로 불러와진 데이터로 수정 필요*/
+  const idx = c;
   for (let i = 0; i < len; i++) {
     if (idx == response.data.item[i].idx) {
       const info = response.data.item[i];

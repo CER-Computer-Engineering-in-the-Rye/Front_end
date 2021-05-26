@@ -161,7 +161,11 @@ button:hover{
           </div>
           <script>
             function ss(){
-                location.href="update.html";/*get 방식으로 idx 보내기*/
+              let url_string = window.location.href;
+              let url = new URL(url_string);
+              let c = url.searchParams.get("idx");
+              const link = "update.html?idx=" + c;
+              location.href=link;/*get 방식으로 idx 보내기*/
             }
             function erase(){
                 alert("삭제기능 구현해주세여");
