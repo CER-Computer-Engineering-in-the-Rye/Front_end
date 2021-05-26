@@ -165,21 +165,19 @@ button:hover{
               let url = new URL(url_string);
               let c = url.searchParams.get("idx");
               const link = "update.html?idx=" + c;
-              location.href=link;/*get 방식으로 idx 보내기*/
-            }
-            function erase(){
-                alert("삭제기능 구현해주세여");
+              location.href=link;
             }
             function mvlist(){
                 location.href="list.html";
             }
           </script>
-          <button class="snip1535" onclick="erase()" style="position: absolute; right: 400px; font-size: 15px;">글삭제</button>
+          <button class="del" style="position: absolute; right: 400px; font-size: 15px;">글삭제</button>
           <button class="snip1535" onclick="ss()" style="position: absolute; right: 300px;font-size: 15px;">글수정</button>
           <button class="snip1535" onclick="mvlist()" style="position: absolute; right: 180px;font-size: 15px;">목록으로</button>
     </div>
     <div>
       <script src="../게시판/read.js"></script>
+      <script src="../게시판/delete.js"></script>
 
     </div>
 
