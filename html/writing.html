@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-</html>
-
 
 <head>
     <meta charset="UTF-8">
@@ -12,8 +10,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/pont.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-
-    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <title>
         꼬기조아
     </title>
@@ -62,36 +58,8 @@
   
                 <p><input type="text" name="title" placeholder="제목" style="width:450px; background-color: white; height: 30px;"></p><br/> 
                 <p><ul class="wri"></ul><br/> 
-
-                <p id="editor" style="width: 400px; height: 800px;">
-                    <!-- <div id="editor"></div> -->
-                    <script>
-                        ClassicEditor
-                            .create(document.querySelector('#editor'))
-                            .catch(error => {
-                                console.error(error);
-                            });
-                    </script>
-                    
-                   <textarea class="summernote" name="contents"> 
-                </textarea></p><!--textarea의 값이 이상하게 뜸, 스페이스만 따다다-->
+                <textarea name="editor1"></textarea>
                 <br><button type="submit" class="wts-btn" style="font-family: 'Noto Serif KR', serif;">제출하기</button>
-           
-            <script type="text/javascript">
-                const $ = document.querySelector.bind(document);
-                const input_wri = $(".wri");
-                axios.defaults.baseURL = "http://apigogi.dothome.co.kr";
-                let data = new FormData();
-                axios.get("/board/info", data).then((response) => {
-                  const writer =
-                    response.data.item[0].writer; /*user 계정 아이디로 수정 필요*/
-                  console.log(response);
-                  const span = document.createElement("span");
-                  span.innerText = writer;
-                  input_wri.appendChild(span);
-                });
-            </script>
-            <script src="../게시판/writing.js"></script>
         </div>
 
         <footer class="s-footer">
@@ -103,4 +71,29 @@
             허미림 wowoo3545@gmail.com</span><br>
             <span>© Copyright Meet your Meat 2021</span>
         </footer>
+        <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+        <script type="text/javascript">
+            const $ = document.querySelector.bind(document);
+            const input_wri = $(".wri");
+            axios.defaults.baseURL = "http://apigogi.dothome.co.kr";
+            let data = new FormData();
+            axios.get("/board/info", data).then((response) => {
+              const writer =
+                response.data.item[0].writer; /*user 계정 아이디로 수정 필요*/
+              console.log(response);
+              const span = document.createElement("span");
+              span.innerText = writer;
+              input_wri.appendChild(span);
+            });
+
+            CKEDITOR.replace( 'editor1', {
+                language: 'ko',
+                uiColor: '#eeeeee',
+                resize_enabled: false,
+                width: '300px',
+                height: '500px'
+            });
+        </script>
+        <script src="../게시판/writing.js"></script>
     </body>
+</html>
