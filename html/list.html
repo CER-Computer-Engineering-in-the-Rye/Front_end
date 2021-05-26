@@ -5,45 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYM | COMMUNITY</title>
-    <style>
-        table.type09 {
-            border-collapse: collapse;
-            text-align: left;
-            line-height: 1.5;
-        }
-        table.type09 thead th {
-            padding: 10px;
-            font-weight: bold;
-            vertical-align: top;
-            color: #ffffff;
-            border-bottom: 3px solid #737272;
-        }
-        table.type09 tbody th {
-            width: 150px;
-            padding: 10px;
-            font-weight: bold;
-            vertical-align: top;
-            border-bottom: 1px solid #ccc;
-            background: #f7f3f3;
-        }
-        table.type09 td {
-            width: 350px;
-            padding: 10px;
-            vertical-align: top;
-            border-bottom: 1px solid #ccc;
-            color: rgb(182, 182, 182);
-        }
-        .snip1535 {
-            position: absolute;
-            right: 100px;
-            top: 500px;
-        }
-    </style>
     <link href="img/logo-background.jpg" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/listbtn.css">
+    <link rel="stylesheet" href="css/list.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
@@ -60,18 +26,13 @@
                 <div class="menu__item"><a href="cow.html">COW</a></div>
                 <div class="menu__item"><a href="pig.html">PIG</a></div>
                 <div class="menu__item"><a href="map.html">INFORMATION</a></div>
-                <div class="menu__item"><a href="writing.html">BOARD</a></div>
+                <div class="menu__item"><a href="list.html">BOARD</a></div>
             </div>
             <div class="account">
                 <div class="login-button" onclick="location.href = 'login.html';">login</div>
             </div>
         </div>
     </div>
-    <script>
-        function mvwrite() {
-            location.href = "writing.html";
-        }
-    </script>
     <br/><br/><br/><br/><br/><br/>
     <div style="text-align: center;padding-bottom: 300px; display: block;">
         <table class="type09" style="display: inline;">
@@ -86,6 +47,7 @@
         </table>
         <button class="snip1535" onclick="mvwrite()">글쓰기</button>
     </div>
+    
     <!-- footer -->
     <div class="footer">
         <span>Contributor<br>
@@ -96,6 +58,6 @@
             허미림 wowoo3545@gmail.com</span><br>
         <span>© Copyright Meet your Meat 2021</span> 
     </div>
-    <script src="../게시판/list.js"></script>
+    <script src="js/list.js"></script>
 </body>
 </html>
