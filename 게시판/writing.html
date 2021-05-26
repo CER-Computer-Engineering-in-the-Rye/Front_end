@@ -85,7 +85,8 @@
       axios.defaults.baseURL = "http://apigogi.dothome.co.kr";
       let data = new FormData();
       axios.get("/board/info", data).then((response) => {
-        const writer = response.data.item[0].writer;
+        const writer =
+          response.data.item[0].writer; /*user 계정 아이디로 수정 필요*/
         console.log(response);
         const span = document.createElement("span");
         span.innerText = writer;
