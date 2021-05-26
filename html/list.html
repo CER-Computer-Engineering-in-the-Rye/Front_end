@@ -4,54 +4,55 @@
 </html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/landing/index.css">
-    <link rel="stylesheet" href="css/listbtn.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/landing/index.css">
+  <link rel="stylesheet" href="css/listbtn.css">
 
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <title>
-        꼬기조아
-    </title>
-    <style>
-        table.type09 {
-  border-collapse: collapse;
-  text-align: left;
-  line-height: 1.5;
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  <title>
+      꼬기조아
+  </title>
+  <style>
+      table.type09 {
+        border-collapse: collapse;
+        text-align: left;
+        line-height: 1.5;
 
-}
-table.type09 thead th {
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  color:#ffffff;
-  border-bottom: 3px solid #737272;
-}
-table.type09 tbody th {
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-  border-bottom: 1px solid #ccc;
-  background: #f7f3f3;
-}
-table.type09 td {
-  width: 350px;
-  padding: 10px;
-  vertical-align: top;
-  border-bottom: 1px solid #ccc;
-  color: rgb(182, 182, 182);
+      }
+      table.type09 thead th {
+        padding: 10px;
+        font-weight: bold;
+        vertical-align: top;
+        color:#ffffff;
+        border-bottom: 3px solid #737272;
+      }
+      table.type09 tbody th {
+        width: 150px;
+        padding: 10px;
+        font-weight: bold;
+        vertical-align: top;
+        border-bottom: 1px solid #ccc;
+        background: #f7f3f3;
+      }
+      table.type09 td {
+        width: 350px;
+        padding: 10px;
+        vertical-align: top;
+        border-bottom: 1px solid #ccc;
+        color: rgb(182, 182, 182);
 
-}
-.snip1535{
-    position: absolute;
-    right:100px;
-    top: 500px;
-}
-    </style>
+      }
+      .snip1535{
+          position: absolute;
+          right:100px;
+          top: 500px;
+      }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body style="background-color:#262223">
@@ -108,55 +109,12 @@ table.type09 td {
               <th scope="cols">작성 일시</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-              <th scope="row">항목명</th>
-              <td>내용이 들어갑니다.</td>
-              <td>작성 일시가 들어갑니다.</td>
-            </tr>
-            <tr>
-              <th scope="row">항목명</th>
-              <td>내용이 들어갑니다.</td>
-              <td>작성 일시가 들어갑니다.</td>
-            </tr>
-            <tr>
-              <th scope="row">항목명</th>
-              <td>내용이 들어갑니다.</td>
-              <td>작성 일시가 들어갑니다.</td>
-            </tr>
-            <tr>
-                <th scope="row">항목명</th>
-                <td>내용이 들어갑니다.</td>
-                <td>작성 일시가 들어갑니다.</td>
-              </tr>
-              <tr>
-                <th scope="row">항목명</th>
-                <td>내용이 들어갑니다.</td>
-                <td>작성 일시가 들어갑니다.</td>
-              </tr>
-              <tr>
-                <th scope="row">항목명</th>
-                <td>내용이 들어갑니다.</td>
-                <td>작성 일시가 들어갑니다.</td>
-              </tr>
-              <tr>
-                <th scope="row">항목명</th>
-                <td>내용이 들어갑니다.</td>
-                <td>작성 일시가 들어갑니다.</td>
-              </tr>
-              <tr>
-                <th scope="row">항목명</th>
-                <td>내용이 들어갑니다.</td>
-                <td>작성 일시가 들어갑니다.</td>
-              </tr>
-            </tbody>
+            
+            <tbody class="list"></tbody>
           </table>
           <button class="snip1535" onclick="mvwrite()">글쓰기</button>
     </div>
-    <div>
-        
-
-    </div>
+    <script src="../게시판/list.js"></script>
     
 
     
