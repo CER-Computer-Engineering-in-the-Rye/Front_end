@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-</html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <!-- 아래 코드는 jquery를 사용하기 위한 코드 -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <!-- <link rel="stylesheet" href="./Button.css"> -->
-    <link rel="stylesheet" href="css/cow.css">
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <title>
-        꼬기조아
-    </title>
-    <style>ddd
+    <title>MYM | COW</title>
+    <style>
         h2,
         p {
             /* display: none; */
@@ -47,14 +35,7 @@
             /*top버튼 마우스 올렸을 때 색깔*/
         }
         
-        body:before {
-            content: '';
-            height: 100%;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        
-        button {
+        .button {
             background: #96949C;
             color: #fff;
             border: none;
@@ -68,13 +49,13 @@
             outline: none;
         }
         
-        button:hover {
+        .button:hover {
             background: #fff;
             color: #96949C;
         }
         
-        button:before,
-        button:after {
+        .button:before,
+        .button:after {
             content: '';
             position: absolute;
             top: 0;
@@ -85,55 +66,50 @@
             transition: 400ms ease all;
         }
         
-        button:after {
+        .button:after {
             right: inherit;
             top: 30px;
             left: 0;
             bottom: 0;
         }
         
-        button:hover:before,
-        button:hover:after {
+        .button:hover:before,
+        .button:hover:after {
             width: 100%;
             transition: 800ms ease all;
         }
     </style>
-
+    <link href="img/logo-background.jpg" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cow.css">
+    <!-- 아래 코드는 jquery를 사용하기 위한 코드 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- <link rel="stylesheet" href="./Button.css"> -->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
-
-<body style="background-color:#262223">
-    <nav class="mobile-menu">
-
-        <label for="show-menu" class="show-menu"><span>Menu</span><div class="lines"></div></label>
-
-        <input type="checkbox" id="show-menu">
-        <ul id="menu">
-            <li style="font-size: 25px;"><a href="index.html">COWPIG</a></li>
-
-
-            <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
-
-
-
-             <li style="visibility: hidden;"><a href="#">INTRODUCING</a></li>
-            <li><a href="landing.html">INTRODUCING</a></li>
-
-            <li><a href="cow.html">COW</a></li>
-            <li> <a href="pig.html">PIG</a> </li>
-            <li> <a href="map.html">INFORMATION</a> </li>
-            <li><a href="writing.html">BOARD</a></li>
-            <!-- <li><a href="#">Contact</a></li> -->
-            <li style="visibility: hidden;"><a href="#">Contact</a></li>
-            <!-- <li style="visibility: hidden;"><a href="#">Con</a></li> -->
-
-            <li>
-                <div style="color:white;width:20px; text-align: right;"></div>
-                <a href="#"><i class="far fa-user" style="font-size:30px;"></i></a>
-                </div>
-            </li>
-
-        </ul>
-    </nav>
+<body>
+    <div class="header-wrapper">
+        <div class="header">
+            <div class="brand" onclick="location.href = 'index.html';">
+                <div class="brand__logo"></div>
+                <div style="margin-right: 10px"></div>
+                <div class="brand__title">Meet Your Meat</div>
+            </div>
+            <div class="menu">
+                <div class="menu__item"><a href="landing.html">INTRODUCING</a></div>
+                <div class="menu__item"><a href="cow.html">COW</a></div>
+                <div class="menu__item"><a href="pig.html">PIG</a></div>
+                <div class="menu__item"><a href="map.html">INFORMATION</a></div>
+                <div class="menu__item"><a href="writing.html">BOARD</a></div>
+                <div class="menu__item"><a href="#">CONTACT</a></div>
+            </div>
+            <div class="account">
+                <div class="login-button" onclick="location.href = 'login.html';">login</div>
+            </div>
+        </div>
+    </div>
 
 
     <br/><br/><br/><br/><br/><br/>
@@ -169,15 +145,15 @@
     </script>
 
     <div style="text-align: center;">
-        <button onclick="moves1(1)" style="position: absolute; top:350px;left:100px;">Chuck</button>
-        <button onclick="moves1(2)" style="position: absolute; top:420px;left:100px;">Rib</button>
-        <button onclick="moves1(3)" style="position: absolute; top:350px;right:100px;">Short Loin</button>
-        <button onclick="moves1(4)" style="position: absolute; top:420px;right:100px;">Tenderloin</button>
-        <button onclick="moves1(5)" style="position: absolute; top:490px;right:100px;">Sirloin</button>
-        <button onclick="moves1(6)" style="position: absolute; top:560px;right:100px;">Round</button>
-        <button onclick="moves1(7)" style="position: absolute; top:490px;left:100px;">Brisket</button>
-        <button onclick="moves1(8)" style="position: absolute; top:560px;left:100px;">Plate</button>
-        <button onclick="moves1(9)" style="position: absolute; top:630px;left:100px;">Flank</button>
+        <button class="button" onclick="moves1(1)" style="position: absolute; top:350px;left:100px;">Chuck</button>
+        <button class="button" onclick="moves1(2)" style="position: absolute; top:420px;left:100px;">Rib</button>
+        <button class="button" onclick="moves1(3)" style="position: absolute; top:350px;right:100px;">Short Loin</button>
+        <button class="button" onclick="moves1(4)" style="position: absolute; top:420px;right:100px;">Tenderloin</button>
+        <button class="button" onclick="moves1(5)" style="position: absolute; top:490px;right:100px;">Sirloin</button>
+        <button class="button" onclick="moves1(6)" style="position: absolute; top:560px;right:100px;">Round</button>
+        <button class="button" onclick="moves1(7)" style="position: absolute; top:490px;left:100px;">Brisket</button>
+        <button class="button" onclick="moves1(8)" style="position: absolute; top:560px;left:100px;">Plate</button>
+        <button class="button" onclick="moves1(9)" style="position: absolute; top:630px;left:100px;">Flank</button>
 
         <img src="img/cow/cow.png" width="1200px"></div>
     <br/><br/><br/><br/><br/><br/>
@@ -289,8 +265,5 @@
             허미림 wowoo3545@gmail.com</span><br>
         <span>© Copyright Meet your Meat 2021</span> 
     </footer>
-
-
 </body>
-
 </html>
